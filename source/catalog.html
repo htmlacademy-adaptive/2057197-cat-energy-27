@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header wrapper">
     <div class="hedar__logo-picture">
       <a class="logo-picture" href="#">
         <img src="image/logo-mobile.svg" width="33" height="37" alt="Картнка Кэт Энерджи.">
@@ -32,7 +33,7 @@
               Главная
             </a>
           </li>
-          <li class="nav-list__item--current">
+          <li class="nav-list__item">
             <a href="#">
               Каталог продукции
             </a>
@@ -48,7 +49,9 @@
   </header>
 
   <main class="catalog-container">
-    <h1 class="form-container__title products">Каталог продукции</h1>
+    <section class="products">
+      <div class="products__wrapper wrapper">
+    <h1 class="form-container__title products__title">Каталог продукции</h1>
     <ol class="products__list">
       <li class="products__item">
         <img class="products__image" src="image/catalog_chicken.png" width="68" height="86"
@@ -69,7 +72,7 @@
           </tr>
         </table>
         <button class="products__button button" type="button">
-          <span class="button__text">Подробнее</span>
+          <span class="button__text">Заказать</span>
         </button>
       </li>
       <li class="products__item">
@@ -91,7 +94,7 @@
           </tr>
         </table>
         <button class="products__button button" type="button">
-          <span class="button__text">Подробнее</span>
+          <span class="button__text">Заказать</span>
         </button>
       </li>
       <li class="products__item">
@@ -113,7 +116,7 @@
           </tr>
         </table>
         <button class="products__button button" type="button">
-          <span class="button__text">Подробнее</span>
+          <span class="button__text">Заказать</span>
         </button>
       </li>
       <li class="products__item">
@@ -135,7 +138,7 @@
           </tr>
         </table>
         <button class="products__button button" type="button">
-          <span class="button__text">Подробнее</span>
+          <span class="button__text">Заказать</span>
         </button>
       </li>
       <li class="products__item">
@@ -157,7 +160,7 @@
           </tr>
         </table>
         <button class="products__button button" type="button">
-          <span class="button__text">Подробнее</span>
+          <span class="button__text">Заказать</span>
         </button>
       </li>
       <li class="products__item">
@@ -179,7 +182,7 @@
           </tr>
         </table>
         <button class="products__button button" type="button">
-          <span class="button__text">Подробнее</span>
+          <span class="button__text">Заказать</span>
         </button>
       </li>
       <li class="products__item">
@@ -201,84 +204,92 @@
           </tr>
         </table>
         <button class="products__button button" type="button">
-          <span class="button__text">Подробнее</span>
+          <span class="button__text">Заказать</span>
         </button>
       </li>
-    </ol>
     <div class="all-catalog">
-      <span class="all-catalog__plus"></span>
+      <button class="all-catalog__plus">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor">
+          <path stroke="#D3D3D3" stroke-width="2" d="M15 0v30M30 15H0"/>
+        </svg>
+      </button>
       <b class="all-catalog__show">Показать еще 100500 товаров</b>
       <p class="all-catalog__text">На самом деле вкусов гораздо больше!</p>
       <button class="all-catalog__button button">
-        <span class="button__text">Показать все</span>
+        <span class="all-catalog__text button__text">Показать все</span>
       </button>
     </div>
+  </ol>
+  </div>
+  </section>
 
     <section class="additionally">
+      <div class="additionally__wrapper wrapper">
       <h2 class="additionally__title">Дополнительные товары</h2>
       <ul class="additionally__list">
-        <li class="additionally__item products">
-          <b class="products__title">Сахарозаменитель</b>
-          <table class="products__table">
-            <tr class="products__row">
-              <td class="products__column-first">1 упаковка(100г)</td>
-              <td class="products__column-second">200 &#8381;</td>
+        <li class="additionally__item">
+          <b class="additionally__subtitle">Сахарозаменитель</b>
+          <table class="additionally__table">
+            <tr class="additionally__row">
+              <td class="additionally__column-first">1 упаковка(100г)</td>
+              <td class="additionally__column-second">200 &#8381;</td>
             </tr>
           </table>
-          <button class="products__button button" type="button">
-            <span class="button__text">Подробнее</span>
+          <button class="additionally__button button" type="button">
+            <span class="button__text">Заказать</span>
           </button>
         </li>
-        <li class="additionally__item products">
-          <b class="products__title">Питьевая вода</b>
-          <table class="products__table">
-            <tr class="products__row">
-              <td class="products__column-first">5 литров</td>
+        <li class="additionally__item">
+          <b class="additionally__subtitle">Питьевая вода</b>
+          <table class="additionally__table">
+            <tr class="additionally__row">
+              <td class="additionally__column-first">5 литров</td>
               <td class="products__column-second">50 &#8381;</td>
             </tr>
           </table>
-          <button class="products__button button" type="button">
-            <span class="button__text">Подробнее</span>
+          <button class="additionally__button button" type="button">
+            <span class="button__text">Заказать</span>
           </button>
         </li>
-        <li class="additionally__item products">
-          <b class="products__title">Молоко</b>
-          <table class="products__table">
-            <tr class="products__row">
-              <td class="products__column-first">1 литр</td>
-              <td class="products__column-second">100 &#8381;</td>
+        <li class="additionally__item">
+          <b class="additionally__subtitle">Молоко</b>
+          <table class="additionally__table">
+            <tr class="additionally__row">
+              <td class="additionally__column-first">1 литр</td>
+              <td class="additionally__column-second">100 &#8381;</td>
             </tr>
           </table>
-          <button class="products__button button" type="button">
-            <span class="button__text">Подробнее</span>
+          <button class="additionally__button button" type="button">
+            <span class="button__text">Заказать</span>
           </button>
         </li>
-        <li class="additionally__item products">
-          <b class="products__title">Витамины</b>
-          <table class="products__table">
-            <tr class="products__row">
-              <td class="products__column-first">1 упаковка(30г)</td>
-              <td class="products__column-second">300 &#8381;</td>
+        <li class="additionally__item">
+          <b class="additionally__subtitle">Витамины</b>
+          <table class="additionally__table">
+            <tr class="additionally__row">
+              <td class="additionally__column-first">1 упаковка(30г)</td>
+              <td class="additionally__column-second">300 &#8381;</td>
             </tr>
           </table>
-          <button class="products__button button" type="button">
-            <span class="button__text">Подробнее</span>
+          <button class="additionally__button button" type="button">
+            <span class="button__text">Заказать</span>
           </button>
         </li>
       </ul>
-    </section>
-    <section class="gift">
-      <h2 class="visually-hidden">Подарок за покупку</h2>
-      <img class="gift__image" src="image/icon_gift.svg" width="78" height="80" alt="Картинка подарка.">
-      <p class="">Закажите все
-        и получите чехол для
-        кота в подарок!</p>
+      <div class="gift">
+        <h2 class="visually-hidden">Подарок за покупку</h2>
+        <img class="gift__image" src="image/icon_gift.svg" width="78" height="80" alt="Картинка подарка.">
+        <p class="gift__text">Закажите все
+          и получите чехол для
+          кота в подарок!</p>
+      </div>
+    </div>
     </section>
 
   </main>
 
   <footer class="main-footer">
-    <div class="main-footer__wrapper">
+    <div class="main-footer__wrapper wrapper">
       <div class="main-footer__contacts contacts">
         <div class="contacts__text">
           <b class="contacts__invite">приглашаем к сотрудничеству дилеров!</b>
@@ -289,10 +300,11 @@
         <div class="contacts_map"></div>
       </div>
       <div class="main-footer__logo-name logo-name">
-        <a class="logo-name__link">
-          <img src="image/logo_words.svg.svg" width="101" height="18" alt="Кэт Энерджи.">
+        <a class="logo-name__link-footer">
+          <img src="image/logo_words.svg.svg" width="128" height="24" alt="Кэт Энерджи.">
         </a>
       </div>
+      <div class="footer__top-line demarcation-line"></div>
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -325,6 +337,7 @@
           </li>
         </ul>
       </div>
+      <div class="footer__bottom-line demarcation-line"></div>
       <div class="main-footer__copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy

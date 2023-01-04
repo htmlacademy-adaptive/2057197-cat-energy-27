@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header wrapper">
     <div class="hedar__logo-picture">
       <a class="logo-picture" href="#">
         <img src="image/logo-mobile.svg" width="33" height="37" alt="Картнка Кэт Энерджи.">
@@ -37,7 +38,7 @@
               Каталог продукции
             </a>
           </li>
-          <li class="nav-list__item nav-list__item--current">
+          <li class="nav-list__item">
             <a href="#">
               Подбор программы
             </a>
@@ -47,24 +48,27 @@
     </nav>
   </header>
 
-  <main class="form-container">
-    <div class="form-container__wrapper">
-      <h1 class="form-container__title">Подбор программы</h1>
-      <section class="form-container__about-cat">
+  <main class="form-container form">
+    <div class="form__wrapper wrapper">
+      <h1 class="form__title">Подбор программы</h1>
+      <section class="form__about-cat">
         <h2 class="visually-hidden">Данные вашего кота</h2>
-        <p class="form-containe__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <div class="form-container__data survey">
-          <form class="survey__form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="survey__text" type="text" name="mailing-e-mail" placeholder="Барсик">
+        <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <div class="form__data">
+          <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="input__name">Имя:*</span>
+            <input class="input__text input__text--error" type="text" name="mailing-e-mail" placeholder="Барсик">
           </form>
-          <form class="survey__form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="survey__text" type="text" name="mailing-e-mail" placeholder="7">
+          <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="input__name">Вес (кг):*</span>
+            <input class="input__text" type="text" name="mailing-e-mail" placeholder="7">
           </form>
-          <form class="survey__form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="survey__text" type="text" name="mailing-e-mail" placeholder="7">
+          <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="input__name">Возраст (лет):</span>
+            <input class="input__text" type="text" name="mailing-e-mail" placeholder="7">
           </form>
         </div>
-        <div class="form-container__data program">
+        <div class="form__data program">
           <ul class="program__list">
             <li class="program__item">
               <label class="program__control control">
@@ -90,14 +94,16 @@
           </ul>
         </div>
       </section>
-      <section class="form-container__about-owner owner-data">
-        <h2 class="form-container__subtitle">Контактные данные (владельца кота)</h2>
-        <form class="owner-data__form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="owner-data__text" type="text" name="mailing-e-mail" placeholder="kuklachev@gmail.com">
-          <form class="owner-data__form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="owner-data__text" type="text" name="telephon-number" placeholder="8 (960) 900-60-90">
-          </form>
+      <section class="form__about-owner owner-data">
+        <h2 class="form__subtitle">Контактные данные (владельца кота)</h2>
+        <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
+          <span class="input__name">E-mail:*</span>
+          <input class="input__text input__text--error" type="text" name="mailing-e-mail" placeholder="kuklachev@gmail.com">
         </form>
+          <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="input__name">Телефон:*</span>
+            <input class="input__text" type="text" name="telephon-number" placeholder="8 (960) 900-60-90">
+          </form>
       </section>
       <section class="form-container__comment">
         <h2 class="comment__subtitle">Комментарий</h2>
@@ -106,49 +112,50 @@
           <textarea required placeholder="Расскажите обо всех повадках кота" name="comment" id="comment"></textarea>
         </form>
       </section>
-      <section class="form-container__comment additionally-form">
-        <h2 class="additionally-form__subtitle">Дополнительно</h2>
-        <ul class="additionally-form__list">
-          <li class="additionally-form__item">
-            <label class="additionally-form__control control">
-              <input class="visually-hidden control__input" type="checkbox" name="sweetener" checked>
-              <span class="control__mark"></span>
-              <span class="control__color">Сахарозаменитель</span>
+
+      <section class="form__comment additionally">
+        <h2 class="additionally__subtitle">Дополнительно</h2>
+        <ul class="additionally__list">
+          <li class="additionally__item">
+            <label class="additionally__control">
+              <input class="visually-hidden additionally__input" type="checkbox" name="sweetener" checked>
+              <span class="additionally__mark"></span>
+              <span class="additionally__name">Сахарозаменитель</span>
             </label>
           </li>
-          <li class="additionally-form__item">
-            <label class="additionally-form__control control">
-              <input class="visually-hidden control__input" type="checkbox" name="water">
-              <span class="control__mark"></span>
-              <span class="control__color">Питьевая вода</span>
+          <li class="additionally__item">
+            <label class="additionally__control">
+              <input class="visually-hidden additionally__input" type="checkbox" name="water">
+              <span class="additionally__mark"></span>
+              <span class="additionally__name">Питьевая вода</span>
             </label>
           </li>
-          <li class="additionally-form__item">
-            <label class="additionally-form__control control">
-              <input class="visually-hidden control__input" type="checkbox" name="milk">
-              <span class="control__mark"></span>
-              <span class="control__color">Молоко</span>
+          <li class="additionally__item">
+            <label class="additionally__control">
+              <input class="visually-hidden additionally__input" type="checkbox" name="milk">
+              <span class="additionally__mark"></span>
+              <span class="additionally__name">Молоко</span>
             </label>
           </li>
-          <li class="additionally-form__item">
-            <label class="additionally-form__control control">
-              <input class="visually-hidden control__input" type="checkbox" name="vitamins">
-              <span class="control__mark"></span>
-              <span class="control__color">Витамины</span>
+          <li class="additionally__item">
+            <label class="additionally__control">
+              <input class="visually-hidden additionally__input" type="checkbox" name="vitamins">
+              <span class="additionally__mark"></span>
+              <span class="additionally__name">Витамины</span>
             </label>
           </li>
         </ul>
       </section>
-      <section class="form-container__post">
-        <button class="form-container__button button" type="submit"><span class="action">Отправить
+      <section class="form__post post">
+        <button class="form__button button" type="submit"><span class="action">Отправить
             заявку</span></button>
-        <p class="form-container__text">* — Обязательные поля</p>
+        <span class="post__text">* — Обязательные поля</span>
       </section>
     </div>
   </main>
 
   <footer class="main-footer">
-    <div class="main-footer__wrapper">
+    <div class="main-footer__wrapper wrapper">
       <div class="main-footer__contacts contacts">
         <div class="contacts__text">
           <b class="contacts__invite">приглашаем к сотрудничеству дилеров!</b>
@@ -159,10 +166,11 @@
         <div class="contacts_map"></div>
       </div>
       <div class="main-footer__logo-name logo-name">
-        <a class="logo-name__link">
-          <img src="image/logo_words.svg.svg" width="101" height="18" alt="Кэт Энерджи.">
+        <a class="logo-name__link-footer">
+          <img src="image/logo_words.svg.svg" width="128" height="24" alt="Кэт Энерджи.">
         </a>
       </div>
+      <div class="footer__top-line demarcation-line"></div>
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -195,6 +203,7 @@
           </li>
         </ul>
       </div>
+      <div class="footer__bottom-line demarcation-line"></div>
       <div class="main-footer__copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
