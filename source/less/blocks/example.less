@@ -1,26 +1,65 @@
 .example {
   background-color: #eaeaea;
   min-height: 659px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 1040px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 598px;
+  }
 }
 
-.example__title {
+.example__list {
+  @media (min-width: @tablet-width) {
+
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.result__title {
   color: #000000;
   padding-top: 25px;
   padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
-.example__desc {
+.result__desc {
   padding: 40px 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 436px;
+  }
 }
 
-.example__table {
+.result__table {
   width: 280px;
   height: 70px;
   margin-bottom: 20px;
   margin-left: 20px;
 }
 
-.example__row-first {
+.result__row-first {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -31,7 +70,7 @@
   text-transform: uppercase;
 }
 
-.example__row-second {
+.result__row-second {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -42,7 +81,7 @@
   color: #444444;
 }
 
-.example__summ {
+.result__summ {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -54,7 +93,61 @@
   margin: 20px 66px;
 }
 
-.example__slider {
+.slider {
+  position: relative;
   margin-top: 20px;
   margin-left: 20px;
+}
+
+.example__slider {
+  display: flex;
+}
+
+.example__befor {
+  position: absolute;
+  width: 145px;
+  height: 256px;
+  overflow: hidden;
+}
+
+.example__after {
+  position: absolute;
+  margin-left: 140px;
+  width: 145px;
+  height: 256px;
+  overflow: hidden;
+}
+
+.example__line {
+  position: absolute;
+  left: 140px;
+  width: 4px;
+  height: 256px;
+  background: #666666;
+  border-radius: 2px;
+  z-index: 3;
+}
+
+.example__toggle {
+  position: absolute;
+  top: 110px;
+  left: -20px;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-image: url(../../image/slider-arrows.svg);
+  background-repeat: no-repeat;
+  background-position: 7px;
+  border: 3px solid #666666;
+}
+
+.slider__image-befor {
+  max-width: none;
+}
+
+.slider__image-after {
+  position: absolute;
+  right: 3px;
+  max-width: none;
 }

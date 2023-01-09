@@ -6,12 +6,93 @@
   color: #000000;
   margin-left: 20px;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.advantages__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1440px;
+  }
 }
 
 .advantages__item {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+
+  @media (min-width: @tablet-width) {
+    min-height: 280px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    min-height: 280px;
+  }
+}
+
+.advantages__item-one {
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    margin-right: 153px;
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 230px;
+    margin-right: 94px;
+    margin-left: 110px;
+  }
+}
+
+.advantages__item-two {
+  @media (min-width: @tablet-width) {
+    width: 246px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 246px;
+    margin-right: 79px;
+  }
+}
+
+.advantages__item-three {
+  @media (min-width: @tablet-width) {
+    width: 248px;
+    margin-right: 137px;
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 248px;
+    margin-right: 77px;
+  }
+}
+
+.advantages__item-four {
+  @media (min-width: @tablet-width) {
+    width: 250px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 250px;
+  }
 }
 
 .advantages__icon {
@@ -19,6 +100,14 @@
   height: 60px;
   background: #68b738;
   margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+
+  }
 }
 
 .advantages__image {
@@ -29,5 +118,11 @@
 }
 
 .advantages__desc {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
   max-width: 200px;
 }

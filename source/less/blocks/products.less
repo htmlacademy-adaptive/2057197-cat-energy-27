@@ -9,6 +9,22 @@
   grid-template-rows: repeat(8, 1fr);
   grid-column-gap: 0;
   grid-row-gap: 19px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 324px);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 80px;
+    grid-row-gap: 63px;
+  }
 }
 
 .all-catalog__plus {

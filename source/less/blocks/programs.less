@@ -4,10 +4,31 @@
   background-color: #ffffff;
 }
 
-.programs__item-slim {
-  padding: 21px 19px 22px 22px;
+.programs__list {
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
+.programs__item {
+  min-width: 280px;
+  min-height: 266px;
+  background-color: #f2f2f2;
+  margin: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    min-height: 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 570px;
+    min-height: 374px;
+    margin-top: 130px;
+  }
+}
 
 .programs__title {
   font-family: "Oswald", sans-serif;
@@ -20,19 +41,52 @@
   margin-left: 91px;
 }
 
+.programs__item-slim {
+  position: relative;
+  padding: 21px 19px 22px 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 320px;
+  }
+}
+
 .programs__item-pro {
+  position: relative;
   padding: 24px 11px 22px 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 30px;
+  }
 }
 
-.programs__item {
-  min-width: 280px;
-  min-height: 266px;
-  background-color: #f2f2f2;
-  margin: 20px;
+.programs__images-slim {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    height: 211px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 106px;
+  }
 }
 
-.programs__images {
-  margin: 0 20px;
+.programs__images-pro {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 268px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+    height: 100px;
+  }
 }
 
 .programs__slogan {
