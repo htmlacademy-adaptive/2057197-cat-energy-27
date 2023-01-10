@@ -2,14 +2,93 @@
   display: flex;
   justify-content: space-between;
   width: 320px;
-  background: #ffffff;
+  min-height: 63px;
   padding: 10px 0 18px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    min-height: 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    min-height: 140px;
+  }
 }
 
 .hedar__logo-picture {
   margin-left: 20px;
 }
 
+.hedar__logo-picture img {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.logo-picture {
+  @media (min-width: @tablet-width) {
+
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url(../../image/logo-tablet.svg);
+    width: 202px;
+    height: 59px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 4;
+  }
+}
+
+
 .header__burger {
   border: 1.5px solid #000000;
+}
+
+.main-nav__wrapper {
+  min-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    justify-content: end;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    width: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 478px;
+    z-index: 3;
+  }
+}
+
+.main-nav__list a {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
 }

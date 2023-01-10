@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -51,9 +52,10 @@
   <main class="form-container form">
     <div class="form__wrapper wrapper">
       <h1 class="form__title">Подбор программы</h1>
+      <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+
       <section class="form__about-cat">
         <h2 class="visually-hidden">Данные вашего кота</h2>
-        <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <div class="form__data">
           <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
             <span class="input__name">Имя:*</span>
@@ -94,6 +96,7 @@
           </ul>
         </div>
       </section>
+
       <section class="form__about-owner owner-data">
         <h2 class="form__subtitle">Контактные данные (владельца кота)</h2>
         <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -105,7 +108,8 @@
             <input class="input__text" type="text" name="telephon-number" placeholder="8 (960) 900-60-90">
           </form>
       </section>
-      <section class="form-container__comment">
+
+      <section class="form-container__comment comment">
         <h2 class="comment__subtitle">Комментарий</h2>
         <form class="comment__form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="comment">Комментарий</label>
@@ -113,7 +117,7 @@
         </form>
       </section>
 
-      <section class="form__comment additionally">
+      <section class="form__additionally additionally">
         <h2 class="additionally__subtitle">Дополнительно</h2>
         <ul class="additionally__list">
           <li class="additionally__item">
