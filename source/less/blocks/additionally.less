@@ -1,6 +1,7 @@
 .additionally__button {
   width: 280px;
   height: 40px;
+  margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
     width: 632px;
@@ -33,11 +34,23 @@
 }
 
 .additionally__title {
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
   color: #000000;
+  background-color: #ffffff;
+  margin-right: 60px;
+  margin-bottom: 37px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-right: 300px;
   }
 
   @media (min-width: @desktop-width) {
@@ -46,10 +59,33 @@
   }
 }
 
+.additionally__list {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 69px;
+  }
+}
+
 .additionally__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
+}
+
+.additionally__item::before {
+  content: "";
+  position: absolute;
+  top: 125px;
+  left: -20px;
+  border: 1px solid #ebebeb;
+  width: calc(100% + 40px);
+  height: 0;
 }
 
 .additionally__subtitle {
@@ -59,7 +95,9 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  text-align: center;
   color: #222222;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -72,7 +110,14 @@
   }
 }
 
-.additionally__column-first, .additionally__column-second {
+.additionally__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 12px;
+}
+
+.additionally__column-first,
+.additionally__column-second {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -82,26 +127,78 @@
 }
 
 .gift {
-  width: 280px;
   height: 290px;
   background-image: linear-gradient(to top, rgba(104, 183, 56, 0.15), rgba(104, 183, 56, 0.15)), url("../../image/gift-background.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-size: cover, contain;
-  display: block;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    height: 200px;
+    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.15), rgba(104, 183, 56, 0.15)), url("../../image/gift-background_tablet.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 180px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 289px;
+    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.15), rgba(104, 183, 56, 0.15)), url("../../image/gift-background_desctop.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 180px;
+  }
 }
 
+.gift__image {
+  margin: 59px 101px 48px;
+
+  @media (min-width: @tablet-width) {
+    margin: 57px 0 60px 80px;
+    width: 80px;
+    height: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 57px 82px 47px;
+  }
+
+}
 
 .gift__text {
+  display: inline-block;
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  display: block;
   align-items: center;
   text-align: center;
   color: #ffffff;
   max-width: 161px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 120px;
+    text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 42px;
+  }
 }

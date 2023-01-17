@@ -15,6 +15,7 @@
   @media (min-width: @desktop-width) {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 72px;
   }
 }
 
@@ -23,12 +24,15 @@
     display: flex;
     flex-wrap: wrap;
     width: 768px;
+    counter-reset: index;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 70px;
+    justify-items: center;
+    counter-reset: index;
   }
 }
 
@@ -38,12 +42,49 @@
   margin: 20px 0;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    display: block;
     min-height: 280px;
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
     display: block;
     min-height: 280px;
+  }
+}
+
+.advantages__item::after {
+  @media (min-width: @tablet-width) {
+    content: counters(index, ".", decimal) " ";
+    counter-increment: index;
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    text-align: center;
+    color: #f2f2f2;
+    width: 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: counters(index, ".", decimal) " ";
+    counter-increment: index;
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    text-align: center;
+    color: #f2f2f2;
+    width: 120px;
   }
 }
 
@@ -102,11 +143,11 @@
   margin: 0 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 20px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
-
+    padding: 0;
   }
 }
 
@@ -115,9 +156,19 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 13px;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 17px 17px 15px;
+    margin: 0;
+  }
 }
 
 .advantages__desc {
+  position: relative;
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -125,4 +176,15 @@
   line-height: 18px;
   color: #444444;
   max-width: 200px;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 31px;
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 31px;
+    margin-left: 20px;
+  }
 }

@@ -1,0 +1,39 @@
+.line {
+  position: relative;
+}
+
+.line::before {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 20px;
+  height: 2px;
+  width: 100%;
+  background-color: #68b738;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 0;
+  }
+}
+
+.line__container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.demarcation-line {
+  border: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
+}

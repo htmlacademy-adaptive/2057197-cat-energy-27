@@ -9,17 +9,19 @@
     width: 709px;
     background-image: none;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    z-index: 2;
+@media (min-width: @desktop-width) {
+  .promo__wrapper::before {
     position: absolute;
-    top: -167px;
-    left: 700px;
-    width: 720px;
-    height: 696px;
+    top: -140px;
+    left: 50%;
+    width: 55%;
+    height: 155%;
+    content: "";
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../image/background-desktop__licking-cat.png");
     background-repeat: no-repeat, no-repeat;
     background-size: cover, contain;
-    background-position: right;
+    z-index: 1;
   }
 }
