@@ -12,10 +12,6 @@
 }
 
 .example__list {
-  @media (min-width: @tablet-width) {
-
-  }
-
   @media (min-width: @desktop-width) {
     display: flex;
   }
@@ -38,17 +34,34 @@
 }
 
 .result__desc {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
   padding: 40px 20px 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    max-width: 708px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 24px;
     width: 436px;
+  }
+}
+
+.result__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -91,6 +104,18 @@
   text-transform: uppercase;
   color: #000000;
   margin: 20px 66px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 174px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .slider {

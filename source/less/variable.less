@@ -9,7 +9,7 @@
 
 @tablet-width: 768px;
 @desktop-width: 1200px;
-@mobile-width-only: 767px;
+@mobile-width-only: 768px;
 
 .page {
   height: 100%;
@@ -29,7 +29,7 @@
 
 
 img {
-  max-width: 100%;
+  max-width: 1000%;
   height: auto;
 }
 
@@ -46,23 +46,25 @@ img {
 
 body {
   background-color: #ffffff;
-  width: 320px;
   box-sizing: border-box;
   min-height: 100%;
-  min-width: 1160px;
   margin: 0;
 }
 
 .wrapper {
-  width: 320px;
-  margin: 0 auto;
+  padding: 0 20px;
+
 
   @media (min-width: @tablet-width) {
-    width: 708px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 110px;
   }
 }
 
@@ -84,8 +86,4 @@ h2 {
 p {
   margin: 0;
   padding: 0;
-}
-
-.demarcation-line {
-  border: 1px solid #d9d9d9;
 }
