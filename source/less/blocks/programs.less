@@ -19,20 +19,20 @@
 
 .programs__item {
   position: relative;
-  width: 280px;
+  min-width: 280px;
   min-height: 266px;
   background-color: #f2f2f2;
-  margin: 20px;
+  margin: 20px 0;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
+    min-width: 708px;
     min-height: 372px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 570px;
+    min-width: 570px;
     min-height: 374px;
-    margin-top: 130px;
+    margin: 130px 0 0;
   }
 }
 
@@ -42,25 +42,38 @@
   }
 }
 
+.programs__item:last-child {
+  margin: 45px 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 130px 0 0;
+  }
+}
+
 .programs__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
+  text-align: center;
   text-transform: uppercase;
   margin-top: 10px;
-  margin-left: 91px;
+
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    text-align: left;
     margin-left: 0;
+    margin-top: 77px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-left: 0;
+    margin-top: 77px;
   }
 }
 
@@ -68,12 +81,14 @@
   padding: 21px 19px 22px 22px;
 
   @media (min-width: @tablet-width) {
+    padding: 21px 0 22px 53px;
     margin-top: 320px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 45px;
     margin-left: 260px;
+    padding: 0;
   }
 }
 
@@ -81,12 +96,14 @@
   padding: 24px 11px 22px 13px;
 
   @media (min-width: @tablet-width) {
+    padding: 24px 0 22px 53px;
     margin-top: 30px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 45px;
     margin-left: 260px;
+    padding: 0;
   }
 }
 
@@ -131,18 +148,22 @@
   font-style: normal;
   font-weight: 400;
   max-width: 240px;
+  margin: 0 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     max-width: 339px;
+    margin: 0;
+    margin-left: 53px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 24px;
     max-width: 456px;
-    margin-top: 60px;
+    margin-top: 73px;
     margin-left: 60px;
   }
 }
@@ -153,6 +174,7 @@
 }
 
 .programs__link {
+  position: relative;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -163,9 +185,14 @@
   margin: 0 20px;
   text-decoration: none;
 
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-left: 53px;
   }
 
   @media (min-width: @desktop-width) {
@@ -186,4 +213,50 @@
     margin-right: 25px;
   }
 }
+
+.programs__arrow-button {
+  border: 0;
+}
+
+.programs__arrow-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  margin-left: -10px;
+  transition: width 2s;
+}
+
+.programs__arrow-button:hover::before {
+  content: "";
+  width: 26px;
+  margin-left: -13px;
+}
+
+.programs__arrow-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 118%;
+  width: 0;
+  height: 0;
+  margin-top: -4px;
+  margin-left: -12px;
+  border-style: solid;
+  border-width: 5px 0 5px 7px;
+  border-color: transparent transparent transparent #000000;
+
+  @media (min-width: @tablet-width) {
+    left: 115%;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 115%;
+  }
+}
+
+
 
