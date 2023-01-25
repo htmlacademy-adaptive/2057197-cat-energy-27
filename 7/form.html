@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico/favicon-32x32.png">
+  <link rel="icon" href="image/favicons/Favicon-152.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <base href="https://htmlacademy-adaptive.github.io/2057197-cat-energy-27/7/">
+</head>
+
+<body class="page__body">
+  <header class="main-header">
+    <div class="main-header__wrapper wrapper">
+    <div class="hedar__logo-picture">
+      <a class="logo-picture" href="#">
+        <img src="image/logo-mobile.svg" width="33" height="37" alt="Картнка Кэт Энерджи.">
+      </a>
+    </div>
+    <div class="hedar__logo-name logo-name">
+      <a class="logo-name__link" href="#">
+        <img src="image/logo_words.svg.svg" width="101" height="18" alt="Кэт Энерджи.">
+      </a>
+    </div>
+    <nav class="main-nav main-nav--opened main-nav--nojs">
+      <div class="hedar__burger">
+        <button class="main-nav__toggle burger" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--active">
+            <a href="#">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  </header>
+
+  <main class="form-container form">
+    <div class="form__wrapper wrapper">
+      <h1 class="form__title">Подбор программы</h1>
+      <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    </div>
+
+    <section class="form__about-cat">
+      <div class="form__wrapper wrapper">
+        <h2 class="visually-hidden">Данные вашего кота</h2>
+        <div class="container__about-cat">
+        <div class="form__data data">
+          <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="input__name input__name-cat-name">Имя:*</span>
+            <input class="input__text input__text-cat-name input__text--error" type="text" name="cat-name" placeholder="Барсик">
+          </form>
+          <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="input__name input__name-weight">Вес (кг):*</span>
+            <input class="input__text input__text-weight" type="text" name="weight" placeholder="7">
+          </form>
+          <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
+            <span class="input__name input__name-years-old">Возраст (лет):</span>
+            <input class="input__text input__text-years-old" type="text" name="years-old" placeholder="7">
+          </form>
+        </div>
+        <div class="form__data program">
+          <ul class="program__list">
+            <li class="program__item">
+              <label class="program__control control">
+                <input class="visually-hidden control__input" type="radio" name="control-group" value="slim" checked>
+                <span class="control__mark"></span>
+                <span class="control__label">Похудение</span>
+              </label>
+            </li>
+            <li class="program__item">
+              <label class="program__control control">
+                <input class="visually-hidden control__input" type="radio" name="control-group" value="pro">
+                <span class="control__mark"></span>
+                <span class="control__label">Набор массы</span>
+              </label>
+            </li>
+            <li class="program__item">
+              <label class="program__control control">
+                <input class="visually-hidden control__input" type="radio" name="control-group" value="help">
+                <span class="control__mark"></span>
+                <span class="control__label">Не знаю (нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="form__about-owner owner-data">
+      <div class="form__wrapper wrapper">
+        <h2 class="form__subtitle subtitle">Контактные данные (владельца кота)</h2>
+        <div class="container__about-owner">
+        <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
+          <span class="input__name">E-mail:*</span>
+          <div class="input__e-mail">
+          <input class="input__text input__text-e-mail input__text--error" type="text" name="mailing-e-mail"
+            placeholder="kuklachev@gmail.com">
+          </div>
+        </form>
+        <form class="input__form" action="https://echo.htmlacademy.ru/" method="post">
+          <span class="input__name input__name-telephon">Телефон:*</span>
+          <div class="input__telephon-number">
+          <input class="input__text input__text-telephon-number" type="text" name="telephon-number" placeholder="8 (960) 900-60-90">
+        </div>
+        </form>
+      </div>
+      </div>
+    </section>
+
+    <section class="form-container__comment comment">
+      <div class="form__wrapper wrapper">
+        <h2 class="comment__subtitle subtitle">Комментарий</h2>
+        <form class="comment__form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="comment">Комментарий</label>
+          <textarea required placeholder="Расскажите обо всех повадках кота" name="comment" id="comment"></textarea>
+        </form>
+      </div>
+    </section>
+
+    <section class="form__additionally">
+      <div class="form__wrapper wrapper">
+        <h2 class="additionally__subtitle-form subtitle">Дополнительно</h2>
+        <ul class="additionally__list-form">
+          <li class="additionally__item-form">
+            <label class="additionally__control">
+              <input class="visually-hidden additionally__input" type="checkbox" name="sweetener" checked>
+              <span class="additionally__mark"></span>
+              <span class="additionally__name">Сахарозаменитель</span>
+            </label>
+          </li>
+          <li class="additionally__item-form">
+            <label class="additionally__control">
+              <input class="visually-hidden additionally__input" type="checkbox" name="water">
+              <span class="additionally__mark"></span>
+              <span class="additionally__name">Питьевая вода</span>
+            </label>
+          </li>
+          <li class="additionally__item-form">
+            <label class="additionally__control">
+              <input class="visually-hidden additionally__input" type="checkbox" name="milk">
+              <span class="additionally__mark"></span>
+              <span class="additionally__name">Молоко</span>
+            </label>
+          </li>
+          <li class="additionally__item-form">
+            <label class="additionally__control">
+              <input class="visually-hidden additionally__input" type="checkbox" name="vitamins">
+              <span class="additionally__mark"></span>
+              <span class="additionally__name">Витамины</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="form__post post">
+      <div class="post__wrapper form__wrapper wrapper">
+        <button class="form__button button" type="submit"><span class="action">Отправить
+            заявку</span></button>
+        <span class="post__text">* — Обязательные поля</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="main-footer__wrapper">
+      <div class="main-footer__contacts contacts">
+        <div class="contacts__text">
+          <b class="contacts__invite">приглашаем к сотрудничеству дилеров!</b>
+          <div class="contacts__adress">
+            <div class="contacts__adress-street">ул. Большая Конюшенная, д. 19/8</div>
+            <div class="contacts__adress-city">Санкт-Петербург</div>
+          </div>
+        </div>
+        <div class="contacts_map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021609819!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sen!2srs!4v1673568637311!5m2!1sen!2srs"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="main-footer_container">
+        <div class="wrapper">
+        <div class="main-footer__logo-name logo-name">
+          <a class="logo-name__link-footer">
+            <img class="logo-name__image" src="image/logo_words.svg.svg" width="128" height="24" alt="Кэт Энерджи.">
+          </a>
+        </div>
+        <div class="demarcation-line"></div>
+        <div class="main-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <span class="visually-hidden">VKontacte.</span>
+              <a class="social__link social__link-vkontakte" href="https://vk.com/htmlacademy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="17">
+                  <use href="./image/sprite.svg#vkontakte" />
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <span class="visually-hidden">Youtube.</span>
+              <a class="social__link social__link-youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
+                  <use href="./image/sprite.svg#youtube" />
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <span class="visually-hidden">Telegram.</span>
+              <a class="social__link social__link-telegram" href="https://t.me/htmlacademy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18">
+                  <use href="./image/sprite.svg#telegram" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="demarcation-line"></div>
+        <div class="main-footer__copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="copyright__link-name">HTML Academy</span>
+          </a>
+          <a class="copyright__link-image" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34">
+              <use href="./image/sprite.svg#logo-html" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
+
