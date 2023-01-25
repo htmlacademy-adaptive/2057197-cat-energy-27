@@ -8,7 +8,7 @@
 // Viewports
 
 @tablet-width: 768px;
-@desktop-width: 1200px;
+@desktop-width: 1440px;
 @mobile-width-only: 768px;
 
 .page {
@@ -52,18 +52,17 @@ body {
 }
 
 .wrapper {
+  box-sizing: border-box;
   padding: 0 20px;
-
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
-    margin: 0 auto;
+    max-width: 768px;
     padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
-    margin: 0 auto;
+    max-width: 1440px;
     padding: 0 110px;
   }
 }
