@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico/favicon-32x32.png">
   <link rel="icon" href="image/favicons/Favicon-152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicons/apple.png">
@@ -34,7 +34,11 @@
     <div class="main-header__wrapper wrapper">
     <div class="hedar__logo-picture">
       <a class="logo-picture" href="#">
+        <picture>
+          <source media="(min-width: @desktop-width)" srcset="image/logo-desktop.svg">
+          <source media="(min-width: @tablet-width)" srcset="image/logo-tablet.svg">
         <img src="image/logo-mobile.svg" width="33" height="37" alt="Картнка Кэт Энерджи.">
+      </picture>
       </a>
     </div>
     <div class="hedar__logo-name logo-name">
@@ -232,7 +236,7 @@
               <span class="visually-hidden">VKontacte.</span>
               <a class="social__link social__link-vkontakte" href="https://vk.com/htmlacademy">
                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="17">
-                  <use href="./image/sprite.svg#vkontakte" />
+                  <use href="./image/sprites/sprite_manual.svg#vkontakte" />
                 </svg>
               </a>
             </li>
@@ -240,7 +244,7 @@
               <span class="visually-hidden">Youtube.</span>
               <a class="social__link social__link-youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
-                  <use href="./image/sprite.svg#youtube" />
+                  <use href="./image/sprites/sprite_manual.svg#youtube" />
                 </svg>
               </a>
             </li>
@@ -248,7 +252,7 @@
               <span class="visually-hidden">Telegram.</span>
               <a class="social__link social__link-telegram" href="https://t.me/htmlacademy">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18">
-                  <use href="./image/sprite.svg#telegram" />
+                  <use href="./image/sprites/sprite_manual.svg#telegram" />
                 </svg>
               </a>
             </li>
@@ -261,7 +265,7 @@
           </a>
           <a class="copyright__link-image" href="https://htmlacademy.ru/intensive/adaptive">
             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34">
-              <use href="./image/sprite.svg#logo-html" />
+              <use href="./image/sprites/sprite_manual.svg#logo-html" />
             </svg>
           </a>
         </div>
