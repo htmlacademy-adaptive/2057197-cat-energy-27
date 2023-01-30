@@ -10,7 +10,7 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
-    min-width: 1440px;
+    width: 100%;
     min-height: 496px;
     margin: 0 auto;
   }
@@ -18,14 +18,13 @@
 
 
 .promo__title {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
   color: #ffffff;
+  max-width: 250px;
   padding: 27px 0 25px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -34,6 +33,7 @@
     color: #000000;
     max-width: 420px;
     padding-left: 80px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -43,12 +43,13 @@
     text-align: left;
     padding-top: 80px;
     padding-left: 190px;
+    margin: 0;
   }
 }
 
 .promo__slogan {
   display: block;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: "Oswald-reg", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

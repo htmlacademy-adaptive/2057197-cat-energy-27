@@ -134,18 +134,20 @@ gulp.watch('source/*.html', gulp.series(html, reload));
 // Build
 
 export const build = gulp.series(
-clean,
-copy,
-optimizeImages,
-gulp.parallel(
-styles,
-html,
-scripts,
-svg,
-sprite,
-createWebp
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+  styles,
+  html,
+  scripts,
+  svg,
+  sprite,
+  createWebp
 ),
 );
+
+
 
 // Default
 
@@ -154,7 +156,7 @@ export default
 gulp.series(
 clean,
 copy,
-copyImages,
+optimizeImages,
 gulp.parallel(
 styles,
 html,
